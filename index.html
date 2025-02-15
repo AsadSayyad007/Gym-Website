@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link rel="stylesheet" href="assests/bootstrap.min.css">
+    <script src="assests/jquery-3.7.1.min.js"></script>
+    <script src="assests/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: rgb(48, 8, 8);
+        }
+
+        .hero {
+            background: url('/Images/Hero\ Section1\ \(Gym\ Banner\).jpeg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 20px;
+            color: rgb(48, 8, 8);
+        }
+
+        .h1 {
+            font-weight: bolder;
+            color: rgb(48, 8, 8);
+        }
+
+        .h2 {
+            font-weight: bolder;
+            text-decoration: underline;
+            color: rgb(48, 8, 8);
+        }
+
+        #pricing {
+            font-weight: bolder;
+            color: rgb(48, 8, 8);
+
+        }
+        #contact
+        {
+            color: rgb(48, 8, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GymFit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+    </section>
+    <section class="text-center h1">
+        <h1 class="h1">Welcome to GymFit</h1>
+        <p>Get Stronger, Healthier & Fitter</p>
+    </section>
+
+    <section class="container mt-5" id="services">
+        <h2 class="text-center h2">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 service-card">
+                <img src="Images/Personal Training Image.jpeg" class="img-fluid" alt="Personal Training">
+                <h4>Personal Training</h4>
+                <p>Get expert guidance from our trainers.</p>
+            </div>
+            <div class="col-md-4 service-card">
+                <img src="Images/Yoga Sessions Image.jpeg" class="img-fluid" alt="Yoga Sessions" style="width: 100%;">
+                <h4>Yoga Sessions</h4>
+                <p>Relax and rejuvenate with our yoga classes.</p>
+            </div>
+            <div class="col-md-4 service-card">
+                <img src="Images/Cardio Workouts Image.jpg" class="img-fluid" alt="Cardio Workouts">
+                <h4>Cardio Workouts</h4>
+                <p>Burn calories with our top-notch cardio programs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mt-5" id="pricing">
+        <h2 class="text-center h2">Membership Plans</h2>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>1 Month</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>6 Months</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>1 Year</td>
+                    <td>$250</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="container mt-5" id="contact">
+        <h2 class="text-center h2">Contact Us</h2>
+        <form id="contactForm">
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required placeholder="Enter Your Name...">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required placeholder="Enter Your Email...">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required
+                    placeholder="Please Enter your Message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $("#contactForm").submit(function (event) {
+                event.preventDefault();
+                alert("Message sent successfully!");
+            });
+        });
+    </script>
+</body>
+
+</html>
